@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name • Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name: Cloud • Security • AI projects" />
+  <style>
+    :root{
+      --bg:#0b0d10; --panel:#11151a; --ink:#e9eef5; --muted:#b8c2cf;
+      --brand:#6aa5ff; --accent:#7ef0c3; --border:#1f2630; --chip:#1a212c;
+      --shadow: 0 10px 30px rgba(0,0,0,.35)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,13,16,.75);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border);z-index:9}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:700;letter-spacing:.3px}
+    .links a{margin-left:16px;color:var(--muted)}
+    .links a.active,.links a:hover{color:var(--ink)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:42px 0}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+    h1{font-size:clamp(28px,5vw,40px);margin:0 0 8px}
+    h2{font-size:clamp(22px,3.5vw,28px);margin:0 0 14px}
+    p{margin:0 0 14px;color:var(--muted)}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:#1a2230;color:#fff;padding:10px 14px;border-radius:12px;text-decoration:none;box-shadow:var(--shadow)}
+    .btn.ghost{background:transparent}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .chip{display:inline-block;background:var(--chip);border:1px solid var(--border);padding:6px 10px;border-radius:999px;color:var(--muted);margin:4px 6px 0 0;font-size:13px}
+    .proj{display:flex;flex-direction:column;gap:8px}
+    .proj h3{margin:0}
+    .proj .meta{color:var(--muted);font-size:13px}
+    .section{padding:18px 0}
+    .list{display:grid;gap:10px}
+    .list .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--border);padding:10px 0}
+    .foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;color:var(--muted);border-top:1px solid var(--border);padding-top:14px;margin-top:28px}
+    .social a{margin-right:10px}
+    .avatar{aspect-ratio:1/1;border-radius:14px;width:100%;background:linear-gradient(135deg,#1b2230,#0e1522);display:grid;place-items:center;color:#7aa2ff;font-weight:700;font-size:22px;border:1px solid var(--border)}
+    @media (max-width:840px){
+      .hero{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Your Name</div>
+      <nav class="links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#certs">Certs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card">
+        <h1>Cloud • Security • AI — Portfolio</h1>
+        <p>Hi, I’m <strong>Your Name</strong>. I build beginner-friendly cloud projects (Azure), automate small workflows with AI, and document everything clearly so hiring managers can see my process.</p>
+        <p class="muted">Open to: Junior Cloud / Security Analyst / AI-assisted Cloud roles</p>
+        <div class="cta">
+          <a class="btn" href="YOUR_RESUME_LINK.pdf" target="_blank" rel="noopener">Download Résumé</a>
+          <a class="btn ghost" href="mailto:you@example.com">you@example.com</a>
+          <a class="btn ghost" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="card">
+        <!-- Replace with your headshot; for now, shows initials -->
+        <div class="avatar">YN</div>
+        <p style="margin-top:10px">Based in Ontario, Canada • Available for internships and entry-level roles.</p>
+        <div>
+          <span class="chip">Azure</span><span class="chip">AZ-900</span><span class="chip">SC-900</span>
+          <span class="chip">AZ-104 (in progress)</span><span class="chip">Linux</span><span class="chip">Python basics</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <div class="grid cols-3">
+        <article class="card proj">
+          <h3><a href="https://github.com/your-username/azure-cost-calculator" target="_blank" rel="noopener">Azure Cost Calculator (Static Site)</a></h3>
+          <div class="meta">Pricing basics • Storage vs Compute • Regions</div>
+          <p>Simple web page that explains Azure cost drivers with interactive examples and real pricing links. Great for AZ-900 fundamentals.</p>
+          <div>
+            <span class="chip">Azure Pricing</span><span class="chip">Static Hosting</span><span class="chip">GitHub Pages</span>
+          </div>
+        </article>
+
+        <article class="card proj">
+          <h3><a href="https://github.com/your-username/azure-storage-demo" target="_blank" rel="noopener">Azure Storage Demo (How-To)</a></h3>
+          <div class="meta">Blob • File • Lifecycle mgmt</div>
+          <p>Step-by-step guide (with screenshots) to create a Storage account, container, upload data, and set lifecycle policies in the free sandbox.</p>
+          <div>
+            <span class="chip">AZ-900</span><span class="chip">Documentation</span><span class="chip">Screenshots</span>
+          </div>
+        </article>
+
+        <article class="card proj">
+          <h3><a href="https://github.com/your-username/azure-network-basics" target="_blank" rel="noopener">Azure Networking Basics</a></h3>
+          <div class="meta">VNet • Subnets • NSGs</div>
+          <p>Mini lab write-up that explains VNets, subnets, NSGs, and public vs private endpoints with diagrams. Shows your clarity of thought.</p>
+          <div>
+            <span class="chip">Networking</span><span class="chip">Diagrams</span><span class="chip">Markdown</span>
+          </div>
+        </article>
+      </div>
+      <p style="color:var(--muted);margin-top:10px">
+        Tip: each project should have a README with <em>what</em> you built, <em>why</em> you built it, and <em>how</em> to run it. Add screenshots!
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="card">
+        <div>
+          <span class="chip">Azure Fundamentals</span><span class="chip">IAM & RBAC</span>
+          <span class="chip">Security & Compliance</span><span class="chip">Cost Management</span>
+          <span class="chip">Linux basics</span><span class="chip">Git & GitHub</span>
+          <span class="chip">Python basics</span><span class="chip">CLI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / EDUCATION -->
+    <section id="experience" class="section">
+      <h2>Experience & Education</h2>
+      <div class="card list">
+        <div class="row">
+          <div><strong>Cloud Starter Projects</strong> • Self-Directed</div>
+          <div class="meta">2025</div>
+        </div>
+        <p class="muted">Built hands-on Azure fundamentals labs, wrote documentation, and published to GitHub Pages.</p>
+
+        <div class="row">
+          <div><strong>Coursework</strong> • Microsoft Learn & Udemy</div>
+          <div class="meta">2024–2025</div>
+        </div>
+        <p class="muted">AZ-900, SC-900, AZ-104 (in progress). Focus on cloud fundamentals, identity, governance, security.</p>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certs" class="section">
+      <h2>Certifications</h2>
+      <div class="card list">
+        <div class="row">
+          <div><strong>AZ-900: Microsoft Azure Fundamentals</strong></div>
+          <div class="meta">YYYY-MM</div>
+        </div>
+        <div class="row">
+          <div><strong>SC-900: Microsoft Security, Compliance, and Identity Fundamentals</strong></div>
+          <div class="meta">YYYY-MM</div>
+        </div>
+        <div class="row">
+          <div><strong>AZ-104: Microsoft Azure Administrator</strong> (In Progress)</div>
+          <div class="meta">YYYY-MM</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Best way to reach me is email. I’m happy to share more about my projects or tailor a quick demo.</p>
+        <div class="cta">
+          <a class="btn" href="mailto:you@example.com">Email Me</a>
+          <a class="btn ghost" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>© <span id="y"></span> Your Name</span>
+      <div class="social">
+        <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:you@example.com">Email</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Set current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Simple active link highlight
+    const links = [...document.querySelectorAll('.links a')];
+    const setActive = () => {
+      const pos = window.scrollY + 100;
+      links.forEach(a=>{
+        const sec = document.querySelector(a.getAttribute('href'));
+        if(!sec) return;
+        const top = sec.offsetTop, bottom = top + sec.offsetHeight;
+        a.classList.toggle('active', pos>=top && pos<bottom);
+      });
+    };
+    window.addEventListener('scroll', setActive);
+    setActive();
+  </script>
+</body>
+</html>
+"add portfolio template"
